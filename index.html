@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ElKitab Library - Part 1</title>
+    <link rel="stylesheet" href="css/all.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap" rel="stylesheet" />
+    <link rel="icon" href="image/android-chrome-512x512.png" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .delete {
+            border: 10px solid red;
+            border-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Start Settings Box -->
+    <div class="settings-box">
+        <div class="toggle-settings">
+            <i class="fa-solid fa-gear fa-spin"></i>
+        </div>
+        <div class="settings-container">
+            <div class="option-box">
+                <h4>Panel Colors</h4>
+                <ul class="colors-list">
+                    <li class="active" data-color="#0F2C59"></li>
+                    <li data-color="#FFB664"></li>
+                    <li data-color="#FAF5EE"></li>
+                    <li data-color="#F5D2BC"></li>
+                    <li data-color="#151C26"></li>
+                </ul>
+            </div>
+
+            <div class="option-box">
+                <h4>Category Backgrounds</h4>
+                <div class="random-Backgrounds">
+                    <span class="yes active" data-background="yes">yes</span>
+                    <span class="no" data-background="no">no</span>
+                </div>
+            </div>
+            <div class="option-box">
+                <h4>Bullets</h4>
+                <div class="bullets-option">
+                    <span class="yes active" data-display="show">Show</span>
+                    <span class="no" data-display="hide">Hide</span>
+                </div>
+            </div>
+            <button class="reset-options">Reset Options</button>
+            <div class="box-time">
+                <div id="clock" class="clock"></div>
+                <div id="date-time"></div>
+            </div>
+            <img src="image/Picsart_23-11-14_13-29-57-532.png" style="width: 200px; height: 200px" alt="" />
+            <div style="
+            text-align: center;
+            border-top: 1px solid rgb(12, 12, 137);
+            border-radius: 20px;
+            font-family: 'Times New Roman', Times, serif;
+          ">
+                <p>--o ESA Coding Lab o--</p>
+                <p>--o Al-Kitab Library o--</p>
+                <p>--o Cycle 5 o--</p>
+            </div>
+        </div>
+    </div>
+    <!-- End Settings Box -->
+
+    <!-- Start Nav Bullets -->
+    <div class="hav-bullets">
+        <div class="bullet" data-section=".about-us">
+            <div class="tooltip">About Us</div>
+        </div>
+        <div class="bullet" data-section=".skills">
+            <div class="tooltip">Programming Languages</div>
+        </div>
+
+        <div class="bullet" data-section=".UML">
+            <div class="tooltip">UML</div>
+        </div>
+        <div class="bullet" data-section=".clickup">
+            <div class="tooltip">Clickup</div>
+        </div>
+        <div class="bullet" data-section=".figma">
+            <div class="tooltip">Figma</div>
+        </div>
+        <div class="bullet" data-section=".github">
+            <div class="tooltip">GitHub</div>
+        </div>
+        <div class="bullet" data-section=".homep">
+            <div class="tooltip">Home Pages</div>
+        </div>
+
+        <div class="bullet" data-section=".userp">
+            <div class="tooltip">User Pages</div>
+        </div>
+        <div class="bullet" data-section=".adminp">
+            <div class="tooltip">Admin Pages</div>
+        </div>
+        <div class="bullet" data-section=".timeline">
+            <div class="tooltip">Timeline</div>
+        </div>
+        <div class="bullet" data-section=".features">
+            <div class="tooltip">Features</div>
+        </div>
+        <div class="bullet" data-section=".testimonials">
+            <div class="tooltip">Team</div>
+        </div>
+    </div>
+    <!-- End Nav Bullets -->
+
+    <!-- Start Landing PAge -->
+    <div class="landing-page">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="header-area">
+                <img class="bg1" style="width: 50px; height: 50px" src="image/Picsart_23-11-14_13-29-57-532.png"
+                    alt="" />
+                <div class="logo">AlKitab Library</div>
+                <div class="links-container">
+                    <ul class="links open">
+                        <li>
+                            <a href="#" data-section=".about-us" class="active">About</a>
+                        </li>
+                        <li><a href="#" data-section=".skills">Languages</a></li>
+                        <li><a href="#" data-section=".UML">UML</a></li>
+                        <li><a href="#" data-section=".clickup">Click Up</a></li>
+                        <li><a href="#" data-section=".figma">Figma</a></li>
+                        <li><a href="#" data-section=".github">GitHub</a></li>
+                        <li><a href="#" data-section=".homep">Pages</a></li>
+                        <li><a href="#" data-section=".timeline">Timeline</a></li>
+                        <li><a href="#" data-section=".features">Features</a></li>
+                        <li><a href="#" data-section=".testimonials">Team</a></li>
+                    </ul>
+                    <button class="toggle-menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="introduction-text">
+            <h1><span>Library Management System</span></h1>
+            <br /><br /><br /><br /><br /><br />
+            <p>
+
+            </p>
+        </div>
+    </div>
+
+    <!-- End Landing PAge -->
+
+    <!-- Start About Us -->
+
+    <div class="container">
+        <div class="about-us">
+            <div class="info-box">
+                <h2>About Us</h2>
+                <p>
+                    We aim to successfully develop a Library Management System (LMS)
+                    over the course of 2 months, utilizing HTML, CSS, BootStrap, JavaScript,
+                    PHP , API , JSON and AJAX technologies. <br />
+                    This project will be a collaborative effort involving the team
+                    members Mohamad Rammal, Riham Khafaja, Zainab Kraki, and Salma Slim.
+                </p>
+            </div>
+            <div class="image-box">
+                <img style="width: 500px; height: 300px;border-radius: 10px;" src="/image/codemasters.jpg" alt="" />
+            </div>
+        </div>
+    </div>
+
+    <!-- End About Us -->
+
+    <!-- Start Our Skills -->
+    <div class="skills">
+        <div class="container">
+            <h2>Programming Languages</h2>
+            <div class="skill-box">
+                <div class="skill-name">HTML</div>
+                <div class="skill-progress">
+                    <span data-progress="10%"></span>
+                </div>
+            </div>
+            <div class="skill-box">
+                <div class="skill-name">CSS</div>
+                <div class="skill-progress">
+                    <span data-progress="21.7%"></span>
+                </div>
+            </div>
+            <div class="skill-box">
+                <div class="skill-name">JavaScript</div>
+                <div class="skill-progress">
+                    <span data-progress="3.7%"></span>
+                </div>
+            </div>
+
+            <div class="skill-box">
+                <div class="skill-name">TypeScript
+                </div>
+                <div class="skill-progress">
+                    <span data-progress="0.2%"></span>
+                </div>
+            </div>
+            <div class="skill-box">
+                <div class="skill-name">PHP</div>
+                <div class="skill-progress">
+                    <span data-progress="64.7%"></span>
+                </div>
+            </div>
+            <div class="skill-box">
+                <div class="skill-name">Shell</div>
+                <div class="skill-progress">
+                    <span data-progress="0.3%"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Our Skills -->
+    <div class="containeraa">
+        <div class="box" data-aos="fade-up">
+            <!-- Start Gallery -->
+            <div class="UML">
+                <div class="container" style="background-color: #eee">
+                    <h2>Unified Modeling Language (UML)</h2>
+                    <div class="images-box">
+                        <img src="image/Complete.png" style="height: 150px" alt="Complete Activity Diagram" />
+                        <img src="image/User.png" style="height: 150px" alt="User Role Activity Diagram" />
+                        <img src="image/Employee.png" style="height: 150px" alt="Empployee Role Activity Diagram" />
+                        <img src="image/Admin.png" style="height: 150px" alt="Admin Role Activity Diagram" />
+                        <img src="image/RedCross.png" style="height: 150px" alt="RedCross Role Activity Diagram" />
+                        <br>
+                        <img src="image/classdiagram.png" style="height: 150px" alt="Complete Class Diagram" />
+
+                        <img src="image/usecasediagram.png" style="height: 150px" alt="Complete Use Case Diagram" />
+
+                        <img src="image/sequencediagram.png" style="height: 150px" alt="Complete Sequence Diagram" />
+
+
+
+
+                    </div>
+                </div>
+            </div>
+            <!-- End Gallery -->
+        </div>
+        <div class="box" data-aos="fade-down">
+            <!-- Start Gallery -->
+            <div class="clickup">
+                <div class="container" style="background-color: #eee">
+                    <h2>click Up</h2>
+                    <div class="images-box">
+                        <img src="image/ClickUp.png" style="height: 150px" alt="Click Up" />
+                    </div>
+                </div>
+            </div>
+            <!-- End Gallery -->
+        </div>
+        <div class="box" data-aos="fade-left">
+            <!-- Start Gallery -->
+            <div class="figma">
+                <div class="container" style="background-color: #eee">
+                    <h2>Figma</h2>
+                    <div class="images-box">
+                        <img src="image/Figma-Home.png" style="height: 150px" calt="Home Pages" />
+                        <img src="image/Figma-User.png" style="height: 150px" alt="User Pages" />
+                        <img src="image/Figma-admin1.png" style="height: 150px" alt="Employee Pages Dark Mode" />
+                        <img src="image/Figma-admin2.png" style="height: 150px" alt="Empployee Pages Light Mode" />
+                        <br>
+                        <img src="image/adminp.png" style="height: 150px" alt="Admin Pages" />
+                        <img src="image/redcrossp.png" style="height: 150px" alt="RedCross Pages" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="box" data-aos="fade-right">
+            <div class="github">
+                <div class="container" style="background-color: #eee">
+                    <h2>GitHub</h2>
+                    <div class="images-box">
+                        <img src="image/git2.png" style="height: 250px" alt="Home/User" />
+                        <img src="image/git1.png" style="height: 250px" alt="Admin" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Gallery -->
+        <div class="box" data-aos="zoom-in">
+            <!-- Start Gallery -->
+            <div class="homep">
+                <div class="container" style="background-color: #eee">
+                    <h2>Home Pages</h2>
+                    <div class="images-box">
+                        <img src="image/h1.png" style="height: 250px" alt="" />
+                        <img src="image/h2.png" style="height: 250px" alt="" />
+                        <img src="image/h3.png" style="height: 250px" alt="" />
+                        <img src="image/h4.png" style="height: 250px" alt="" />
+                        <img src="image/h5.png" style="height: 250px" alt="" />
+                        <img src="image/h6.png" style="height: 250px" alt="" />
+                        <img src="image/h7.png" style="height: 250px" alt="" />
+                        <img src="image/h8.png" style="height: 250px" alt="" />
+                        <img src="image/h9.png" style="height: 250px" alt="" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Gallery -->
+
+        <div class="box" data-aos="flip-up">
+            <!-- Start Gallery -->
+            <div class="userp">
+                <div class="container" style="background-color: #eee">
+                    <h2>User Pages</h2>
+                    <div class="images-box">
+                        <img src="image/u4.png" style="height: 250px" alt="Image one" />
+                        <img src="image/u1.png" style="height: 250px" alt="Image one" />
+                        <img src="image/u2.png" style="height: 250px" alt="Image one" />
+                        <img src="image/u9.png" style="height: 250px" alt="Image one" />
+                        <img src="image/u5.png" style="height: 250px" alt="Image one" />
+                        <img src="image/u3.png" style="height: 250px" alt="Image one" />
+                        <img src="image/u8.png" style="height: 250px" alt="Image one" />
+                        <img src="image/u7.png" style="height: 250px" alt="Image one" />
+                        <img src="image/u6.png" style="height: 250px" alt="Image one" />
+                        <img src="image/3hpng.png" style="height: 250px" alt="Image one" />
+                        <img src="image/2h.png" style="height: 250px" alt="Image one" />
+                        <img src="image/1h.png" style="height: 250px" alt="Image one" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- End Gallery -->
+
+        <div class="box" data-aos="flip-down">
+            <!-- Start Gallery -->
+            <div class="adminp">
+                <div class="container" style="background-color: #eee">
+                    <h2>Admin Pages</h2>
+                    <div class="images-box">
+                        <img id="delete" src="image/6b.png" style="height: 150px" alt="" />
+                        <img id="delete" src="image/1b.png" style="height: 150px" alt="" />
+                        <img src="image/2b.png" style="height: 150px" alt="" />
+                        <img id="delete" src="image/3b.png" style="height: 150px" alt="" />
+                        <img id="delete" src="image/4b.png" style="height: 150px" alt="" />
+                        <img src="image/5b.png" style="height: 150px" alt="" />
+                        <img src="image/7b.png" style="height: 150px" alt="" />
+                        <img src="image/8b.png" style="height: 150px" alt="" />
+                        <img id="delete" src="image/9b.png" style="height: 150px" alt="" />
+                        <img src="image/10b.png" style="height: 150px" alt="" />
+                        <img id="delete" src="image/11b.png" style="height: 150px" alt="" />
+                        <img id="delete" src="image/12b.png" style="height: 150px" alt="" />
+                        <img id="delete" src="image/13b.png" style="height: 150px" alt="" />
+                        <img src="image/e1.jpg" style="height: 150px" alt="" />
+                        <img src="image/e2.jpg" style="height: 150px" alt="" />
+                        <img src="image/e3.jpg" style="height: 150px" alt="" />
+                        <img src="image/e4.jpg" style="height: 150px" alt="" />
+                        <img src="image/e5.jpg" style="height: 150px" alt="" />
+                        <img src="image/e6.jpg" style="height: 150px" alt="" />
+                        <img src="image/e7.jpg" style="height: 150px" alt="" />
+                        <img src="image/e8.jpg" style="height: 150px" alt="" />
+                        <img src="image/e9.jpg" style="height: 150px" alt="" />
+                        <img src="image/e10.jpg" style="height: 150px" alt="" />
+                        <img src="image/e11.jpg" style="height: 150px" alt="" />
+
+                        <br />
+                        <img id="delete" src="image/1a.png" style="height: 150px" alt="" />
+                        <img src="image/2a.png" style="height: 150px" alt="" />
+                        <img src="image/3a.png" style="height: 150px" alt="" />
+                        <img id="delete" src="image/4a.png" style="height: 150px" alt="" />
+                        <img src="image/5a.png" style="height: 150px" alt="" />
+                        <img id="delete" src="image/6a.png" style="height: 150px" alt="" />
+                        <img id="delete" src="image/7a.png" style="height: 150px" alt="" />
+                        <img id="delete" src="image/8a.png" style="height: 150px" alt="" />
+                        <img src="image/9a.png" style="height: 150px" alt="" />
+                        <img id="delete" src="image/10a.png" style="height: 150px" alt="" />
+                        <img id="delete" src="image/11a.png" style="height: 150px" alt="" />
+                        <img src="image/12a.png" style="height: 150px" alt="" />
+                        <img id="delete" src="image/14a.png" style="height: 150px" alt="" />
+                        <img id="delete" src="image/13a.png" style="height: 150px" alt="" />
+                        <img id="delete" src="image/15a.png" style="height: 150px" alt="" />
+                        <img src="image/16a.png" style="height: 150px" alt="" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Gallery -->
+        <div class="box" data-aos="flip-left">
+            <!-- Start Gallery -->
+            <div class="homep">
+                <div class="container" style="background-color: #eee">
+                    <h2>Admin Pages</h2>
+                    <div class="images-box">
+                        <img src="image/s10.jpeg" style="height: 150px" alt="" />
+                        <img src="image/s11.png" style="height: 150px" alt="" />
+                        <img src="image/s1.jpeg" style="height: 150px" alt="" />
+                        <img src="image/s2.jpeg" style="height: 150px" alt="" />
+                        <img src="image/s3.jpeg" style="height: 150px" alt="" />
+                        <img src="image/s4.jpeg" style="height: 150px" alt="" />
+                        <img src="image/s5.jpeg" style="height: 150px" alt="" />
+                        <img src="image/s6.jpeg" style="height: 150px" alt="" />
+                        <img src="image/s7.jpeg" style="height: 150px" alt="" />
+                        <img src="image/s9.jpeg" style="height: 150px" alt="" />
+
+                        <img src="image/s12.png" style="height: 150px" alt="" />
+                        <img src="image/s13.png" style="height: 150px" alt="" />
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Gallery -->
+        <div class="box" data-aos="flip-right">
+            <!-- Start Gallery -->
+            <div class="homep">
+                <div class="container" style="background-color: #eee">
+                    <h2>RedCross Pages</h2>
+                    <div class="images-box">
+                        <img src="image/redcross1.png" style="height: 150px" alt="" />
+                        <img src="image/redcross2.png" style="height: 150px" alt="" />
+                        <img src="image/redcross3.png" style="height: 150px" alt="" />
+                        <img src="image/redcross4.png" style="height: 150px" alt="" />
+                        <img src="image/redcross5.png" style="height: 150px" alt="" />
+                        <img src="image/redcross6.png" style="height: 150px" alt="" />
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Gallery -->
+    </div>
+
+
+
+
+
+
+    <!-- Start Timeline -->
+    <div class="timeline">
+        <div class="container ">
+            <div class="timeline-content">
+                <div class="year">Week 1</div>
+                <div class="right">
+                    <div class="content">
+                        <h3>Project Planning</h3>
+                        <p>
+                            In the initial project phase, define the library management
+                            system's scope, gather requirements, establish team roles,
+                            create a project timeline with milestones, allocate resources,
+                            design the user interface, structure the data model and database
+                            and obtain formal client or library approval before moving on to
+                            the development stage.
+                        </p>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+                <div class="left">
+                    <div class="content">
+                        <h3>Plan of design</h3>
+                        <p>
+                            Figma's collaborative features and iterative design approach
+                            ensure a successful outcome.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-content">
+                <div class="year">Week 2</div>
+                <div class="right">
+                    <div class="content">
+                        <h3>Front-End Planning</h3>
+                        <p>
+                            In this phase, we focus on structuring the library management
+                            system's user interface using HTML. We'll design the web pages
+                            and layout, ensuring a user-friendly and responsive experience
+                            for library staff and patrons.
+                        </p>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+                <div class="left">
+                    <div class="content">
+                        <h3>Project Pages Distribution Part 1</h3>
+                        <p>
+                            Focuses on organizing and distributing project pages for our
+                            Library Management System web project. It involves creating a
+                            clear structure and layout for user-friendly access to
+                            information. Stay tuned for more updates!
+                        </p>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+                <div class="right">
+                    <div class="content">
+                        <h3>Start HTML Design</h3>
+                        <p>
+                            Begin designing the HTML structure for the Library Management
+                            System web project. Define the layout, headers, and main content
+                            sections to create the foundation for the user interface.
+                        </p>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+                <div class="left">
+                    <div class="content">
+                        <h3>Start CSS Design</h3>
+                        <p>
+                            Begin CSS design phase for the Library Management System
+                            project, focusing on creating a visually appealing and
+                            user-friendly interface.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-content">
+                <div class="year">Week 3</div>
+                <div class="left">
+                    <div class="content">
+                        <h3>Brainstorming</h3>
+                        <p>
+                            Involves exploring vital functionalities like user
+                            authentication, book categorization, borrowing and returning
+                            processes, and intuitive interfaces. Collaborate to sculpt a
+                            system that exceeds expectations, focusing on user experience
+                            for both librarians and patrons.
+                        </p>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+                <div class="right">
+                    <div class="content">
+                        <h3>Project Pages Distribution Part 2</h3>
+                        <p>
+                            In this phase, assign responsibilities for pages—home, catalog,
+                            user profiles—based on team strengths. Ensure a cohesive
+                            structure and navigation between pages. Regular communication
+                            and alignment are crucial for progress and a unified design
+                            language.
+                        </p>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+
+                <div class="left">
+                    <div class="content">
+                        <h3>Continue CSS Design</h3>
+                        <p>
+                            Maintain a style guide for cohesive design, and test across
+                            devices for a seamless user experience.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-content">
+                <div class="year">Week 4</div>
+
+                <div class="left">
+                    <div class="content">
+                        <h3>JavaScript Planning</h3>
+                        <p>
+                            Plan JavaScript for interactive elements and dynamic content.
+                            Identify user interaction points and ensure modular code for
+                            scalability.
+                        </p>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+                <div class="right">
+                    <div class="content">
+                        <h3>Start JavaScript</h3>
+                        <p>
+                            Refine aesthetics for consistency. Prioritize responsiveness and
+                            fine-tune typography, colors, and layouts. Test across devices.
+                        </p>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+                <div class="left">
+                    <div class="content">
+                        <h3>Start JavaScript</h3>
+                        <p>
+                            Begin coding interactive features gradually. Organize code
+                            efficiently and ensure cross-browser compatibility.
+                        </p>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+                <div class="right">
+                    <div class="content">
+                        <h3>Finish Front-End</h3>
+                        <p>
+                            Integrate HTML, CSS, and JavaScript. Test thoroughly for
+                            usability and polish until ready for deployment.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="timeline-content">
+                <div class="year">Week 5</div>
+                <div class="right">
+                    <div class="content">
+                        <h3>Back-End Planning</h3>
+                        <p>
+                            During the Back-End Planning phase, our primary focus is on architecting the foundational
+                            structure and functionality of the library management system.
+                        </p>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+                <div class="left">
+                    <div class="content">
+                        <h3>Project Pages Distribution</h3>
+                        <p>
+                            During Week 5 of the backend development phase, focus shifted to implementing core
+                            functionalities. This involved building essential server-side components, refining database
+                            structures, and integrating key features. Testing and debugging were crucial to ensure
+                            smooth interactions between the frontend and backend systems, paving the way for further
+                            refinement and feature enhancements in subsequent stages.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-content">
+                <div class="year">Week 6</div>
+                <div class="right">
+                    <div class="content">
+                        <h3>Database Tables</h3>
+                        <p>
+                            Start MySQL table setup and held discussions to address pending requests.
+                        </p>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+                <div class="left">
+                    <div class="content">
+                        <h3>Finish MySQL</h3>
+                        <p>
+                            Completing MySQL involves finalizing the database design, optimizing queries, implementing
+                            robust security measures, establishing backup plans, and documenting the system for
+                            comprehensive reference
+                        </p>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+                <div class="right">
+                    <div class="content">
+                        <h3>Start PHP BackEnd</h3>
+                        <p>
+                            Beginning the PHP backend involves setting up server-side functionalities for the library
+                            management system, handling user requests, database interactions, authentication, and
+                            implementing logic for seamless data processing and system operations.
+                        </p>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+
+            </div>
+
+            <div class="timeline-content">
+                <div class="year">Week 7</div>
+                <div class="left">
+                    <div class="content">
+                        <h3>Continue PHP Backend</h3>
+                        <p>
+                            Continuing PHP backend development involves iterating on functionalities, ensuring
+                            scalability, implementing security measures, refining database interactions, and maintaining
+                            code quality through consistent testing and optimization for the library management system.
+                        </p>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+
+
+
+            </div>
+
+            <div class="timeline-content">
+                <div class="year">Week 8</div>
+                <div class="left">
+                    <div class="content">
+                        <h3>Brainstorming</h3>
+                        <p>
+                            After completing PHP and backend development, transitioning to AJAX involves implementing
+                            asynchronous communication for dynamic, seamless interactions within the library management
+                            system, enhancing user experience and optimizing data retrieval without refreshing the
+                            entire page.
+                        </p>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+                <div class="right">
+                    <div class="content">
+                        <h3>Start AJAX</h3>
+                        <p>
+                            Integrating AJAX marks a pivotal shift, enabling the library management system to leverage
+                            asynchronous communication for seamless data retrieval and dynamic interactions, enhancing
+                            user engagement and responsiveness.
+                        </p>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+
+
+            </div>
+
+            <div class="timeline-content">
+                <div class="year">Week 9</div>
+
+                <div class="left">
+                    <div class="content">
+                        <h3>Web Presentation </h3>
+                        <p>
+                            In the web presentation for the library management system project, an intuitive interface
+                            showcases streamlined functionalities, illustrating efficient book cataloging, user
+                            management, and seamless interaction.
+                        </p>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+                <div class="right">
+                    <div class="content">
+                        <h3>Record Videos</h3>
+                        <p>
+                            Project videos serve as comprehensive visual guides, presenting the library management
+                            system's features, user workflows, and system functionalities, offering an engaging and
+                            informative resource for stakeholders and potential users.
+                        </p>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+                <div class="left">
+                    <div class="content">
+                        <h3>Training</h3>
+                        <p>
+                            Training sessions focus on honing both individual and team presentation abilities, equipping
+                            us to articulate the intricacies of the library management system project confidently to
+                            diverse audiences.
+                        </p>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+                <div class="right">
+                    <div class="content">
+                        <h3>Finish Project</h3>
+                        <p>
+                            Congratulations on completing the library management system project!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Timeline -->
+
+    <script>
+        window.addEventListener('scroll', function () {
+            const timelineContents = document.querySelectorAll('.timeline-content');
+            const windowHeight = window.innerHeight;
+    
+            timelineContents.forEach((content) => {
+                const contentTop = content.getBoundingClientRect().top;
+    
+                if (contentTop < windowHeight) {
+                    content.classList.add('fade-in');
+                } else {
+                    content.classList.remove('fade-in');
+                }
+            });
+        });
+    </script>
+
+
+
+    <!-- Start Features -->
+    <div class="features">
+        <h2>Our Features</h2>
+        <div class="container">
+            <div class="feat-box bx2">
+                <img src="image/2.png" alt="" />
+                <h4>ClickUp</h4>
+                <p>
+                    ClickUp streamlines our task management with its intuitive
+                    interface, fostering efficient organization and timely task
+                    completion. Customizable workflows adapt to our library's dynamic
+                    needs, enhancing project coordination.
+                </p>
+            </div>
+            <div class="feat-box">
+                <img src="image/figma (1).png" alt="" />
+                <h4>Figma</h4>
+                <p>
+                    Figma enables seamless collaboration, aiding our team in real-time
+                    design work. Its prototyping and wireframing tools refine our
+                    interface, while version control keeps our project history intact
+                    and allows for easy reversions.
+                </p>
+            </div>
+            <div class="feat-box">
+                <img src="image/github (1).png" alt="" />
+                <h4>GitHub</h4>
+                <p>
+                    GitHub's secure version control hosts our code repositories,
+                    facilitating smooth collaboration among developers. Its issue
+                    tracking ensures prompt bug resolution, while pull requests and
+                    reviews maintain code quality.
+                </p>
+            </div>
+            <div class="feat-box">
+                <img src="image/miro.png" alt="" />
+                <h4>Miro</h4>
+                <p>
+                    Miro's visual workspace aids in brainstorming and planning our
+                    library system's features collaboratively. Flow diagrams and mind
+                    maps create a clear blueprint for development, while remote
+                    collaboration fosters team contribution from anywhere.
+                </p>
+            </div>
+            <div class="feat-box bx5">
+                <img src="image/vsc.jpg" style="border: 1px solid blue; border-radius: 10px" alt="" />
+                <h4>VS Code</h4>
+                <p>
+                    VS Code offers a robust environment for code writing and debugging,
+                    enhanced by versatile extensions. Its integrated terminal
+                    streamlines workflow, allowing seamless command execution within the
+                    editor.
+                </p>
+            </div>
+            <div class="feat-box">
+                <img src="image/font_awesome_logo.png" alt="" />
+                <h4>FontAwesome</h4>
+                <p>
+                    FontAwesome's diverse icon collection elevates our interface,
+                    ensuring visual appeal and usability. Scalability guarantees
+                    consistent high-quality visuals across screens, easily integrated
+                    within HTML, CSS, and JavaScript.
+                </p>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <!-- End Features -->
+
+    <!-- Start Testimonials -->
+    <div class="testimonials">
+        <div class="container">
+            <h2>Project Team</h2>
+            <div class="ts-box">
+                <p>ESA Coding Lab Bootcamp. elkitab.library@gmail.com</p>
+                <div class="person-info">
+                    <img src="https://placehold.it/80/DDD" alt="" />
+                    <h4>Mohamad Rammal</h4>
+                    <p>Code Masters</p>
+                </div>
+            </div>
+            <div class="ts-box">
+                <p>ESA Coding Lab Bootcamp. elkitab.library@gmail.com</p>
+                <div class="person-info">
+                    <img src="https://placehold.it/80/EEE" alt="" />
+                    <h4>Riham Khafaja</h4>
+                    <p>Code Masters</p>
+                </div>
+            </div>
+            <div class="ts-box">
+                <p>ESA Coding Lab Bootcamp. elkitab.library@gmail.com</p>
+                <div class="person-info">
+                    <img src="https://placehold.it/80/AAA" alt="" />
+                    <h4>Salma Slim</h4>
+                    <p>Code Masters</p>
+                </div>
+            </div>
+            <div class="ts-box">
+                <p>ESA Coding Lab Bootcamp. elkitab.library@gmail.com</p>
+                <div class="person-info">
+                    <img src="https://placehold.it/80/AAA" alt="" />
+                    <h4>Zainab Karaki</h4>
+                    <p>Code Masters</p>
+                </div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <!-- End Testimonials -->
+
+    <!-- Start Contact US -->
+    <div class="contact">
+        <div class="overlay"></div>
+        <div class="container">
+            <h2>Contact Us</h2>
+            <form action="">
+                <div class="left">
+                    <input type="text" placeholder="Your Name" name="username" />
+                    <input type="text" placeholder="Your Phone" name="phone" />
+                    <input type="email" placeholder="Your Email" name="email" />
+                    <input type="text" placeholder="Tittle" name="tittle" />
+                </div>
+                <div class="right">
+                    <textarea name="message" placeholder="Your Message"></textarea>
+                    <input type="submit" value="Send" />
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- End Contact US -->
+
+    <!-- Start Footer -->
+    <div class="footer">
+        <p>Copyright © 2024 Al-kitab Library - alkitab.library@uk.ru</p>
+    </div>
+    <!-- End Footer -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="script.js"></script>
+    <script src="js/javascript.js"></script>
+</body>
+
+</html>
