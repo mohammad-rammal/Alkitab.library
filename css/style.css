@@ -105,6 +105,9 @@ body {
 .settings-box .option-box .colors-list li:nth-child(5) {
     background-color: #151c26;
 }
+.settings-box .option-box .colors-list li:nth-child(6) {
+    background-color: #FF0000;
+}
 
 .settings-box .option-box .yes,
 .settings-box .option-box .no {
